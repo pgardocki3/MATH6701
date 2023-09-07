@@ -39,7 +39,7 @@ $\\ \therefore isosceles\ triangle$
 # 7.3.45
 Given: $\|F\| = 20,\ \theta=60^\circ,\ \|d\|= 100 \\$
 
-$W=\|F\|\|d\|cos\theta=20(100)cos(60)=1000$ ft-lb
+$W=\|F\|\|d\|cos\theta=20(100)cos(60^\circ)=1000$ ft-lb
 
 
 # 7.3.53
@@ -82,7 +82,13 @@ $c_1+c_2=5; \ c_1-c_2 = 2 \rightarrow \ c_1 = \frac{7}{2}, c_2=\frac{3}{2} \ther
 
 
 # 7.6.35 (you may assume that Problem 9 gave a vector space)
+Find Basis, a linearly independent set of vectors that can linearly combine to form vector space:
 
+Taking the following set of matrices: $\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}; \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix};\begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix};\begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}\\$
+
+These are linearly independent and can represent $M_{22} \therefore$ a basis.
+
+The dimension is 4 given the 4 matrices used to represent $M_{22}$
 
 # Review Chapter 7.39
 
@@ -91,5 +97,22 @@ Find line through $P = (7,3,-5)$ that is parallel to $\frac{(x-3)}{4} = \frac{(y
 $\textbf{d} = (4,-2,6) \therefore \ \parallel \ line \ is \ \frac{(x-7)}{4} = \frac{(y-3)}{-2}=\frac{(z+5}{6}$
 
 # Review Chapter 7.51
+Checking subspace:
+$P_n$ contains $p_1 \ and \ p_2.\\$
 
-$\frac{d^2p}{dx^2}=0$
+Vector addition:
+If $\ \frac{d^2p_1}{dx^2}=0, \ \frac{d^2p_2}{dx^2}=0 \rightarrow \frac{d^2p_1}{dx^2} +\frac{d^2p_2}{dx^2}=0$
+
+Scalar Multiplication:
+Given $c$ as a scalar, $\frac{d^2cp}{dx^2}=c \cdot\frac{d^2p}{dx^2}=c\cdot 0=0$
+
+$\\ \therefore$ the set of polynomials in $P_n$ satisfying $\frac{d^2p}{dx^2}=0$ is a supspace of $P_n$
+
+Find a basis:
+Assume a monomial $x^k$, Find $\frac{d^2}{dx^2}(x^k)=0 \\$
+$\frac{d^2}{dx^2}(x^k)=k(k-1)x^{k-2}=0, \ When \ k=1,x$
+$\therefore$ Basis is {1,x}
+
+
+
+
