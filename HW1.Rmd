@@ -1,0 +1,95 @@
+---
+title: 'MATH 6701 Homework #1'
+author: "Patrick Gardocki"
+date: "2023-09-05"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 7.1.44
+
+Given: $y=-x^2+3x$
+
+Let $x=t$, $y=-t^2+3t$
+
+For point $(0,0)$, $t=0$
+$\vec{r}(t)=t \textbf{i} + (-t^2 + 3t) \textbf{j} \\$
+
+Tangent vector: $\frac{dr}{dt}=\textbf{i} + (-2t+3)\textbf{j} \\$
+
+Unit Tangent Vector at point $(0,0)$:
+
+$\frac{\frac{dr}{dt}}{\|\frac{dr}{dt}\|}=\frac{1}{\sqrt{1+9}}(\textbf{i}+3\textbf{j})=\frac{\sqrt{10}}{10}(\textbf{i}+3\textbf{j})$
+
+# 7.2.26
+
+$\|P_1,P_2\|= \sqrt{1^2+2^2+4^2}=\sqrt{21}\\$
+
+$\|P_1,P_3\|= \sqrt{3^2+2^2+(2\sqrt{2})^2}=\sqrt{21}\\$
+
+$\|P_2,P_3\|= \sqrt{2^2+0^2+(2\sqrt{2}-4)^2}=\sqrt{28-16\sqrt{2}}\\$
+
+$\|P_1,P_2\|=\|P_1,P_3\| \ne \|P_2,P_3\|$
+
+$\\ \therefore isosceles\ triangle$
+
+# 7.3.45
+Given: $\|F\| = 20,\ \theta=60^\circ,\ \|d\|= 100 \\$
+
+$W=\|F\|\|d\|cos\theta=20(100)cos(60)=1000$ ft-lb
+
+
+# 7.3.53
+First solve 7.3.52
+$Prove \ n=a\textbf{i} + b\textbf{j} \ is \perp \ to \ ax+by+c=0 \\$
+
+$P_1(x_1,y_1) \ and \ P_2(x_2,y_2)$ are points on the line.
+$\vec{P_1P_2}= (x_2-x_1,y_2-y_1)$ 
+If $n  \cdot \vec{P_1P_2}=0$ Then perpendicular.
+$(a,b) \cdot (x_2-x_1,y_2-y_1)= (ax_2+by_2) - (ax_1 + by_1)=-c-(-c)=0 \\$
+$\therefore$ n is perpendicular to the line
+
+Prove $d = \frac{|ax_1 + by_1 +c|}{\sqrt{a^2+b^2}} \\$
+
+$d=\|\vec{P_1P_2}\|cos\theta = \frac{|n\cdot \vec{P_1P_2}|}{\|n\|} = \frac{(ax_2+by_2) - (ax_1 + by_1)}{\sqrt{a^2+b^2}}=\frac{|c - (ax_1 + by_1)|}{\sqrt{a^2+b^2}}=\frac{|ax_1 + by_1+c|}{\sqrt{a^2+b^2}}$
+
+# 7.4.52
+$b  \times c= \begin{vmatrix} \textbf{i} & \textbf{j} & \textbf{k}\\ 1 & 4 & 1 \\ 1 & 1 & 5\end{vmatrix} = \begin{vmatrix} 4 & 1 \\  1 & 5\end{vmatrix}\textbf{i} - \begin{vmatrix} 1 & 1 \\  1 & 5\end{vmatrix}\textbf{j} + \begin{vmatrix} 1 & 4 \\  1 & 1\end{vmatrix}\textbf{k}=(20-1)\textbf{i}-(5-1)\textbf{j} + (1-4)\textbf{k} =19\textbf{i} -4\textbf{j} -3\textbf{k}$
+ 
+$v = |a \cdot (b\times c)| = (3\textbf{i} + \textbf{j} + \textbf{k}) \cdot19(\textbf{i} -4\textbf{j} -3\textbf{k})=|57-4-3|=50\ cu. \ units$
+
+# 7.5.67
+Let $z=t$
+$4x-2y-z=1; \ x+y+2z=1 \rightarrow 4x-2y=1+t; \ x+y=1-2t \\$
+Solve system of equations.
+$x = \frac{1}{2} - \frac{1}{2}t; \ y = \frac{1}{2} - \frac{3}{2}t; \ z=t$
+
+# 7.6.24
+$p_1(x)=x+1; \ p_2(x)=x-1$
+
+## a)
+To be linearly independent: $c_1p_1+c_2p_2=0\\$
+
+$c_1(x+1) + c_2(x-1) = (c_1+c_2)x + (c_1-c_2)=0 \rightarrow \ c_1+c_2 = 0; \ c_1-c_2 =0\therefore \ c_1=0; \ c_2=0$
+
+## b)
+$p(x)=5x+2 \\$
+
+$c_1+c_2=5; \ c_1-c_2 = 2 \rightarrow \ c_1 = \frac{7}{2}, c_2=\frac{3}{2} \therefore p(x) = \frac{7}{2}p_1(x)+ \frac{3}{2}p_2(x)$
+
+
+# 7.6.35 (you may assume that Problem 9 gave a vector space)
+
+
+# Review Chapter 7.39
+
+Find line through $P = (7,3,-5)$ that is parallel to $\frac{(x-3)}{4} = \frac{(y+4)}{-2}=\frac{(z-9}{6} \\$
+
+$\textbf{d} = (4,-2,6) \therefore \ \parallel \ line \ is \ \frac{(x-7)}{4} = \frac{(y-3)}{-2}=\frac{(z+5}{6}$
+
+# Review Chapter 7.51
+
+$\frac{d^2p}{dx^2}=0$
