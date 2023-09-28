@@ -11,7 +11,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 8.2.33
 
+$A = \begin{bmatrix} 2 & -3 & 1 \\ 1 & 1 & -1 \\ 4 & -1 & -1\end{bmatrix}; \ B= \begin{bmatrix} -12 \\ 1 \\ 10 \end{bmatrix}; \ X= \begin{bmatrix} -1 \\ 4 \\2 \end{bmatrix}+c_1\begin{bmatrix} 2 \\ 3 \\ 5 \end{bmatrix}$
+$AX=B \rightarrow  \begin{bmatrix} 2 & -3 & 1 \\ 1 & 1 & -1 \\ 4 & -1 & -1\end{bmatrix}\begin{bmatrix} x_1\\ x_2 \\ x_3 \end{bmatrix} =\begin{bmatrix} -12 \\ 1 \\ 10 \end{bmatrix}$
+If $c_1=0, \ AX = \begin{bmatrix} 2 & -3 & 1 \\ 1 & 1 & -1 \\ 4 & -1 & -1\end{bmatrix} \begin{bmatrix} 1 \\ 7 \\ 7\end{bmatrix} = \begin{bmatrix} -12 \\ 1 \\ 10 \end{bmatrix}$
 
+If $X$ is solution for $AX=0$, then $X$ is a solution for any constant, $c_1$.
+
+
+$A= \begin{bmatrix} 2 & -3 & 1 \\ 1 & 1 & -1 \\ 4 & -1 & -1\end{bmatrix} \xrightarrow[\text{R2-R1}]{\text{R1/2}} \begin{bmatrix} 1 & -3/2 & 1/2  \\ 0 & 5/2 & -3/2 \\ 4 & -1 & -1\end{bmatrix} \xrightarrow[\text{R1+R2*3/2}]{\text{R2*2/5}} \begin{bmatrix} 1 & 0 & -2/5  \\ 0 & 1 & -3/5 \\ 0 & -5 & -3 \end{bmatrix} \xrightarrow[]{\text{R3-5R2}} \begin{bmatrix} 1 & 0 & -2/5  \\ 0 & 1 & -3/5 \\ 0 & 0 & 0\end{bmatrix}= RREF(A)$
+
+$Rank(A) = 2 \\$
+Nullity(A) = # of Columns - Rank $\therefore \ Nullity(A)= 3-2=1$
 
 # 8.3.5
 
@@ -89,9 +99,10 @@ $det(AB)=detA*detB=detB*detA=det(BA)$
 
 # 8.6.31
 
-$A^{-1}= \frac{1}{det(A)}(adj(A))$
-$\begin{bmatrix} 4 & -3  \\ x & 4  \end{bmatrix}$
-$det(A)= 16-3x; \ adj(A)=\begin{bmatrix} 4 & -x  \\ 3 & 4  \end{bmatrix}$
+If $AA=I$, A is its own inverse.
+$\begin{bmatrix} 4 & -3  \\ x & 4  \end{bmatrix} \begin{bmatrix} 4 & -3  \\ x & 4  \end{bmatrix} = \begin{bmatrix} 1 & 0  \\ 0 & 1  \end{bmatrix}$
+$\begin{bmatrix} 16-3x & 0  \\ 0 & 16-3x  \end{bmatrix} \rightarrow 16-3x=1 \rightarrow x=5$
+Since $AA=I$, A is its own inverse.
 
 # 8.6.36
 
@@ -101,12 +112,19 @@ If either A or B is singular, then $det(A) = 0 \therefore det(AB) = det(A)*det(B
 
 $S=PDP^T \\$
 
+
 $A =\begin{bmatrix} \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{6}} \\ \frac{-1}{\sqrt{3}} & 0 & \frac{2}{\sqrt{6}} \\ \frac{1}{\sqrt{3}} & \frac{-1}{\sqrt{2}} & \frac{1}{\sqrt{6}} \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix} {\begin{bmatrix} \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{6}} \\ \frac{-1}{\sqrt{3}} & 0 & \frac{2}{\sqrt{6}} \\ \frac{1}{\sqrt{3}} & \frac{-1}{\sqrt{2}} & \frac{1}{\sqrt{6}} \end{bmatrix}}^T = \begin{bmatrix} \frac{8}{3} & \frac{4}{3} & \frac{-1}{3} \\ \frac{4}{3} & \frac{11}{3} & \frac{4}{3} \\ \frac{-1}{3} & \frac{4}{3} & \frac{8}{3} \end{bmatrix}$
 
 
 # 8.9.5
 
+$A = \begin{bmatrix} 8-\lambda & 5 \\4 & -\lambda\end{bmatrix} \rightarrow \lambda^2 -8\lambda - 20 = 0 \rightarrow \lambda = -2, \ 10$
+$(-2)^m=c_o-2c_1 \\10^m=c_o+10c_1$
+$c_o = \frac{5(-2)^m+10^m}{6} \\ c_1 = \frac{-(-2)^m+10^m}{12}$
 
+$A^m = c_oI+c_1A= \begin{bmatrix} \frac{(-2)^m+2^m5^{m+1}}{6} & \frac{5(-(-2)^m+10^m)}{12}\\ \frac{-(-2)^m+10^m}{3}& \frac{5(-2)^m+10^m}{6}  \end{bmatrix}$
+
+$m=5; \ A^5= \begin{bmatrix} 83328 & 41680 \\ 33344 & 16640\end{bmatrix}$
 
 # 8.10.16
 
@@ -123,7 +141,7 @@ $\lambda = 1 - \sqrt2; \ \begin{bmatrix} -1- \sqrt2 & 1 & 1 \\ 1 & -\sqrt2 & 1 \
 Norm of $K_1$ is $\sqrt{2}$, $K_2$ and $K_3$ is $2$,
 
 Orthogonal Matrix:
-$\begin{bmatrix} \frac{1}{\sqrt{2}} & \frac{1}{2} & \frac{1}{2} \\ 0 & \frac{-\sqrt{2}}{\sqrt{2}} & \frac{\sqrt{2}}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}} & \frac{1}{2} & \frac{1}{2} \end{bmatrix}$
+$P =\begin{bmatrix} \frac{1}{\sqrt{2}} & \frac{1}{2} & \frac{1}{2} \\ 0 & \frac{-\sqrt{2}}{\sqrt{2}} & \frac{\sqrt{2}}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}} & \frac{1}{2} & \frac{1}{2} \end{bmatrix}$
 
 
 # 8.10.21
