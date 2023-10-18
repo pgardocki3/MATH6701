@@ -1,0 +1,188 @@
+---
+title: "HW3"
+author: "Patrick Gardocki"
+date: "2023-10-18"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1.1.28
+
+Set $f(x)=\int_0^xe^{t^2}dt; \ f'(x)= \frac{d}{dx}\int_0^xe^{t^2}dt=e^{x^2}$
+
+$\frac{dy}{dx}=\frac{d}{dx}[e^{-x^2}]+\frac{d}{dx}[e^{-x^2}f(x)]=-2xe^{-x^2} + dx[e^{-x^2}]f(x) + e^{-x^2}f'(x) \\ = -2xe^{-x^2} - 2xe^{-x^2}\int_{0}^{x} e^{t^2} dt + e^{-x^2}\cdot e^{x^2} \\ = 1 - 2xe^{-x^2} - 2xe^{-x^2}\int_{0}^{x} e^{t^2} dt$
+
+For $\frac{dy}{dx}+2xy=1; \\ 1 - 2xe^{-x^2} - 2xe^{-x^2} \int_{0}^{x} e^{t^2} dt + 2xe^{-x^2} + 2xe^{-x^2} \int_{0}^{x} e^{t^2} dt=1 \\ \therefore 1=1$
+
+This is a solution.
+
+# 1.2.22
+$(1+y^3)y'=x^2; \ f(x.y)=\frac{dy}{dx}=\frac{x^2}{1+y^3}$
+
+
+$\frac{{df}}{{dy}} = -3x^2y^2\left(1 + \frac{{y^3}}{3}\right)^2$
+
+$\frac{dy}{dx}$ and $\frac{df}{dy}$ are both continuous when $y \ne -1$.
+
+For $(x_0,y_0)$ such that $y \ne -1$, there is a unique solution.
+
+# 2.2.25
+
+Given $x^2\frac{dy}{dx}=y-xy, \ y(-1)=-1$
+
+$x^2\frac{dy}{dx}=y(1-x) \rightarrow \int\frac{dy}{y}=\int\frac{1-x}{x^2}dx \rightarrow ln|y|= -\frac{1}{x}-ln|x|+C$
+
+If $y(-1)=-1, \rightarrow y=-1, \ x=-1$ 
+
+Plug into previous equation to solve for C.
+
+$C=-1$
+
+$ln|y|= -\frac{1}{x}-ln|x|-1$
+
+Solve for $y$
+
+$e^{ln|y|}=e^{-\frac{1}{x}-ln|x|-1} \rightarrow y =\frac{1}{x}e^{-\frac{1}{x}-1}$
+
+
+
+# 2.3.13
+
+Given: $x^2y'+x(x+2)y=e^x \rightarrow x^2y'+(x^2+2x)y=e^x$
+
+$\frac{dy}{dx}+(1+\frac{2}{x})y=\frac{e^x}{x^2} \ \ \ EQ1$
+
+$P(x)=1+\frac{2}{x} ; \ f(x)=\frac{e^x}{x^2}$
+
+$P(x)$ is continuous on $(-\infty,0)$ and $f(x)$ is continuous on $(0, \infty)$.
+
+$I(x)=e^{\int P(x)dx} = e^{\int 1+\frac{2}{x}dx}=e^xe^{2ln|x|}=x^2e^x; \ $ I(x) is continuous on $(0,\infty)$
+
+$EQ1 * I(x) = x^2e^x\frac{dy}{dx}+(x^2e^x+2xe^2)y=e^{2x}$
+
+$\frac{d}{dx}x^2e^xy=e^{2x} \rightarrow x^2e^xy=\int e^{2x}dx \rightarrow  x^2e^xy=\frac{1}{2}e^{2x}+C$
+
+Solve for y:
+General Solution: $y=\frac{1}{2x^2e^x}e^{2x}+ \frac{C}{x^2e^x}$ on interval $(0, \infty)$
+
+
+
+# 2.5.18
+
+Given: $x\frac{dy}{dx}-(1+x)y=xy^2$
+
+Substitution: $u =y^{-1}; \ \frac{dy}{dx}=-u^{-2}\frac{du}{dx}\rightarrow \ \frac{du}{dx}+\frac{1+x}{x}u=-1$
+
+Integrating Factor: $e^{\int \frac{1+x}{x}}= e^{lnx+x}=xe^x$
+
+$xe^x\frac{du}{dx}+(e^x+xe^x)u=-xe^x; \  \frac{d}{dx}xe^xu=-xe^x \rightarrow xe^xu=\int -xe^xdx=-xe^x+e^x+c \rightarrow u=-1 +\frac{1}{x} + \frac{c}{x}e^{-x}$
+
+$u=y^{-1} \rightarrow y=\frac{1}{-1 +\frac{1}{x} + \frac{c}{x}e^{-x}}$
+
+# 2.8.2
+
+Using Equation: $P(t)= \frac{aP_0}{bP_0+(a-bP_0)e^{-at}}$
+
+Given: $N(0)=N_0=500; \ N(1)=1000; \ \lim_{\infty}=\frac{a}{b}=50000$
+
+$N(t)= \frac{500a}{500b+(a-500b)e^{-at}}$
+
+$N(t)= \frac{500a/b}{500+(a/b-500)e^{-at}} = \frac{500(a/b)50000)}{500+(50000-500)e^{-at}}= \frac{50000}{1+ 99e^{-at}}$
+
+Sub in $N(1)=1000$, $a=-ln\frac{49}{99} \approx0.7033; b\approx0.00014$
+
+$N(t)= \frac{5000}{1+ 99e^{-0.7033t}}$
+
+# 3.1.26
+
+For $f_1(x)=e^{x/2}; \ f_2(x)=xe^{x/2}$
+
+Linearly Independent if $W(f_1, f_2) \ne 0$ 
+
+$W(f_1, f_2) = \begin{vmatrix} f_1 & f_2 \\f_1' & f_2' \end{vmatrix}=f_1 \cdot f_2' - f_1' \cdot f_2$
+
+$\begin{vmatrix} e^{x/2} & xe^{x/2}\\ \frac{1}{2}e^{x/2} & e^{x/2}+\frac{1}{2}xe^{x/2}\end{vmatrix}=e^x \ne 0$
+
+$\therefore f_1 and f_2$ form a set of solutions on interval $(-\infty, \infty)$.
+
+General Solution: $y=c_1e^{x/2}+c_2xe^{x/2}$ 
+
+# 3.3.35
+
+Given: $y'''+12y''+36y'=0; \ y(0)=0; \ y'(0)=1; \ y''(0)=-7$
+
+$m^3+12m^2+36m=0 =m(m^2+12m+36) \rightarrow m_1=0; \ m^2+12m+36=0=(m+6)^2=0 \rightarrow m_2=m_3=-6$
+
+$y=c_1e^{m_1x}+c_2e^{m_2x}+c_3xe^{m_3x}= c_1+c_2e^{-6x}+c_3xe^{-6x}$
+
+$y' = -6c_2e^{-6x} + c_3(e^{-6x}-6xe^{-6x})$
+
+$y''=36c_2e^{-6x}+c_3(-12e^{-6x}+36xe^{-6x})$
+
+Sub in $y(0)=0$: $c_1+c_2=0$
+
+Sub in $y'(0)=1$: $-6c_2+c_3=1 \rightarrow -72c_2+12c_3=12$
+
+Sub in $y''(0)=-7$: $36c_2-12c_3=-7$
+
+Add $y'$ and $y''$: $-36c_2=5 \rightarrow c_2=\frac{-5}{36}, c_3=\frac{1}{6}, c_1=\frac{5}{36}$
+
+$y=\frac{5}{36}-\frac{5}{36}e^{-6x}+\frac{1}{6}xe^{-6x}$
+
+# 3.4.15
+
+Given: $y'' + y = 2xsinx$
+
+For: $m^2+1=0; \ m^2=-1=\pm\sqrt{-1}=\pm i \rightarrow m_1=i; \ m_2=-i$
+
+$\alpha=0; \ \beta=1 \rightarrow y_c=c_1cosx+c_2sinx$
+
+Assume: $y_p=(Ax^2+B)cosx+(Cx^2+D)sinx$
+$y_p'=(2Ax+B)cosx-(Ax^2+bx)sinx+(2Cx+D)sinx + (Cx^2+Dx)cosx$
+
+$y_p''=2Acosx-(2Ax+B)sinx-(2Ax+B)sinx-(Ax^2+bx)cosx+2Csinx+(2Cx+D)cosx+(2Cx+D)cosx-(Cx^2+Dx)sinx$
+
+Subbing into DE: 
+
+$-4Axsinx=2xsinx \rightarrow A=\frac{-1}{2}$
+
+$4Cxcosx=0 \rightarrow C=0$
+
+$(2A+2D)cosx=0 \rightarrow D=\frac{1}{2}$
+
+$(2B+2C)sinx=0 \rightarrow B=0$
+
+
+$y_p=\frac{-1}{2}x^2cosx+\frac{1}{2}xsinx$
+
+$y= y_p+y_c = c_1cosx+c_2sinx -\frac{1}{2}x^2cosx+\frac{1}{2}xsinx$
+
+
+# 3.4.31
+
+Given: $y''+4y'+5y=35e^{-4x}, \ y(0)=-3, \ y'(0)=1$
+
+$m^2+4m+5=0 \rightarrow m_1=-2+i, \ m_2 =-2-i \therefore \alpha=-2, \ \beta=1$
+
+$y_c=e^{-2x}(c_1cosx+c_2sinx)$
+
+Assume: $y_p=Ae^{-4x}; \ y_p'=-4Ae^{-4x}, \ y_p''=16Ae^{-4x}$
+
+Subbing into DE:
+
+$16Ae^{-4x}-16Ae^{-4x}+5Ae^{-4x}=35e^{-4x} \rightarrow A=7$
+
+$\therefore y_p=7e^{-4x},\ y=y_p+y_c$
+
+$y=e^{-2x}(c_1cosx+c_2sinx)+7e^{-4x}; \ y'=-2e^{-2x}(c_1cosx+c_2sinx)+ e^{-2x}(-c_1sinx+c_2cosx)-28e^{-4x}$
+
+For $y(0)=0 \rightarrow c_1=-10$
+
+For $y'(0)=1 \rightarrow c_2=9$
+
+$y=e^{-2x}(-10cosx+9sinx)+7e^{-4x}$
+
+
