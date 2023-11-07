@@ -1,0 +1,125 @@
+---
+title: "HW4"
+author: "Patrick Gardocki"
+date: "2023-11-07"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+# 3.6: 28
+$x^2y''-3xy'+4y=0; \ y(1)=5; \ y'1)=2$
+
+$y'(x)=mx^{m-1}; \ y''(x)=m(m-1)x^{m-2}$
+
+$(m(m-1)-3m+4)x^m=0 \\ (m^2-4m+4)x^m=0 \\ (m-2)^2=0 \\ \therefore m_1=m_2=2 \\ y_c(x)=c_1x^2+c_2x^2lnx$
+
+$y'(x)=2c_1x+2c_2xlnx+c_2x \\ y(1)=5=c_1 \\ y'(1)=2=2c_1+c_2$
+
+$c_1=5 \\ c_2=-8$
+
+$y(x)=5x^2-8x^2lnx$
+
+
+``` {r 1, echo=FALSE, out.width="50%"}
+# Load the ggplot2 package
+library(ggplot2)
+
+# Create a sequence of x values
+x <- seq(0.01, 5, by = 0.01)
+
+# Calculate y values based on the function
+y <- 5 * x^2 - 8 * x^2 * log(x)
+
+# Create a data frame with x and y
+data <- data.frame(x, y)
+
+# Create the plot
+plot <- ggplot(data, aes(x, y)) +
+  geom_line() +
+  labs(x = "x", y = "y") +
+  ggtitle("Plot of y(x) = 5x^2 - 8x^2 * ln(x)")
+
+# Display the plot
+print(plot)
+
+```
+
+# 3.8: 41
+
+$\frac{d^2x}{dt^2}+4x=-5sin2t+3cos2t; \ x(0)=-; \ x'(0)=1$
+
+$m^2+4=0 \rightarrow m_1=-2i, \ m_2=2i$
+
+$x_c(t)=c_1cos2t+c_2sin2t$
+
+$x_p(t)=Atcos2t+Btsin2t \\ x'_p(t)=(A+2Bt)cos2t+(-2A+Bt)sin2t \\ x''_p(t)=(-4At+4B)cos2t + (-4A-4Bt)sin2t$
+
+$4Bcos2t - 4Asin2t=3cos2t-5sin2t \\ 4B=3 \rightarrow B=\frac{3}{4}\\ -4A=-5 \rightarrow A= \frac{5}{4}$
+
+$x_p(t)=\frac{5}{4}tcos2t + \frac{3}{4}tsin2t$
+
+$x(t)=c_1cos2t+c_2sin2t+ \frac{5}{4}tcos2t + \frac{3}{4}tsin2t$
+
+Given: $x(0)=-; \ x'(0)=1$
+
+$x(t)=-cos2t-\frac{1}{8}sin2t+ \frac{5}{4}tcos2t + \frac{3}{4}tsin2t$
+
+# 3.9: 12
+
+$y''+\lambda y=0; \ y'(0)=0; \ y(\pi/4)=0$
+
+For $\lambda =0$, $y(x)=c_1x+c_2, \ y'(0)=y(\pi/4)=0 \rightarrow c_1=c_2=0$
+
+$y(x)=0$ For $\lambda=0$, no nontrivial solutions, and is not eigenvalue.
+
+For $\lambda <0$, $\lambda = -\alpha^2; \ y''-\alpha^2y=0; \ m^2-\alpha^2=0 \rightarrow m_1=-\alpha, \ m_2=\alpha$
+
+$y(x) = c_1cosh\alpha x+c_2sinh \alpha \rightarrow c_1=c_2=0 \rightarrow y(x)=0$
+
+For $\lambda<0$, no nontrivial solutions, and is not eigenvalue.
+
+
+For $\lambda >0$, $\lambda = \alpha^2; \ y''+\alpha^2y=0; \ m^2+\alpha^2=0 \rightarrow m_1=-i\alpha, \ m_2=i\alpha$
+
+$c_2=0; \ c_1cos\frac{\alpha \pi}{4}=0$
+
+For $c_1 \ne0$, nontrivial solutions. $cos\frac{\alpha \pi}{4}=0 \rightarrow \alpha=2+4n$
+
+$\lambda_n=(2+4n)^2$
+
+$y_n(x)=sin(2+4n)x$
+
+
+# 5.1: 8
+$\frac{1-x}{2+x}=\frac{3-2-x}{2-x}=-1+\frac{3}{2+x}=-1+(\frac{3}{2})(\frac{1}{1+\frac{x}{2}})=\frac{1}{2}-\frac{3x}{4}+\frac{3x^2}{8}-\frac{3x^3}{16}+...$
+
+
+$|\frac{x}{2}|<1 \rightarrow$ Interval of Convergence $(-2,2)$
+
+# 5.1: 19
+
+
+
+# 5.2: 6
+
+
+
+# 5.2: 19
+
+
+
+# 10.2: 22
+
+
+
+# 10.2: 38
+
+
+
+# 10.4: 14 by using variation of parameters using the matrix exponential formula
+
+
+
