@@ -101,25 +101,118 @@ $|\frac{x}{2}|<1 \rightarrow$ Interval of Convergence $(-2,2)$
 
 # 5.1: 19
 
+$y=\sum c_nx^n$
 
+$y''-2xy'+y=0=\sum n(n-1)(c_nx^{n-2})-2\sum nc_nx^n+\sum c_nx^n \\= \sum (k+2)(k+1)c_{k+2}x^k-s\sum kc_kx^k + \sum c_kx^k \\ = 2c_2+c_0+\sum ((k+2)(k+1)(k+2)-(2k-1)c_k)x^k$
+
+$2c_2=-\frac{1}{2}c_0$
+
+$c_{k+2}=\frac{2k-1}{(k+2)(k+1)}c_k$
+
+For $c_0=1; \ c_1=0$
+
+$c_2=-\frac{1}{2}; \ c_3=c_5=c_7=0; \ c_4=-\frac{1}{8}; \ c_6=-\frac{7}{240}$
+
+For $c_0=0; \ c_1=1$
+
+$c_2=c_4=c_6=0; \ c_3=\frac{1}{6}; \ c_5=\frac{1}{24}; \ c_7=\frac{1}{112}$
+
+$\therefore y_1= 1-\frac{x^2}{2}-\frac{x^4}{8}-\frac{7x^6}{240}; \ y_2= x+ \frac{x^3}{6} + \frac{x^5}{24} + \frac{x^7}{112}$
 
 # 5.2: 6
 
+$x^2(x-5)^2y''+4xy'+(x^2-25)y=0 \rightarrow$
 
+$P(x)=\frac{4x}{x^2(x-5^2)}; \ Q(x)=\frac{(x^2-25)}{x^2(x-5)^2}$
+
+For $x_0=0$, $p(x)=(x-0)\frac{4x}{x^2(x-5)^2}; \ q(x)=(x-0)^2\frac{(x^2-25)}{x^2(x-5)^2}. \ \therefore x=0$ is regular singular point.
+
+For $x_0=5$, $p(x)=(x-5)\frac{4x}{x^2(x-5)^2}; \ q(x)=(x-5)^2\frac{(x^2-25)}{x^2(x-5)^2}. \ \therefore x=5$ is irregular singular point.
 
 # 5.2: 19
 
+$3xy''+ (2-x)y'-y=0$
+
+$3\sum (n+r-1)(n+r)c_nx^{n+r-1} + 2\sum (n+r)c_nx^{n+r-1}-\sum (n+r)c_nx^{n+r}-\sum c_nx^{n+r}=0$
+
+$(3r^2-r)c_0x^{r-1}+\sum_{n=1}(3(n+r)^2-(n+r))c_nx^{n+r-1}-\sum (n+r+1)c_nx^{n+r}=0$
+
+Sub m for n-1: $(3r^2-r)c_0x^{r-1}+\sum_{m=0}(((3(m+1+r)^2-(m+1+r))c_{m+1}- (m+r+1)c_m)x^{m+r}=0$
+
+$c_{m+1}=\frac{c_m}{3(m+r+1)-1}$
+
+Given: $3r^2-r=r(3r-1)=0;$ roots are: $r_1=0, \ r_2 = \frac{1}{3}$
+
+For $r_1=0$
+
+$c_1=\frac{1}{2}c_0; \ c_2=\frac{1}{10}c_0; \ c_3=\frac{1}{80}c_0 \ \therefore y_1=1+\frac{1}{2}x+\frac{1}{10}x^2 + \frac{1}{80}x^3+...$
+
+For $r_2=\frac{1}{3}$
+
+$c_1=\frac{1}{3}c_0; \ c_2=\frac{1}{18}c_0; \ c_3=\frac{1}{162}c_0 \ \therefore y_1=x^{1/3}(1+\frac{1}{3}x+\frac{1}{18}x^2 + \frac{1}{162}x^3+...)$
+
+$y=c_1(1+\frac{1}{2}x+\frac{1}{10}x^2 + \frac{1}{80}x^3+...)+ c_2x^{1/3}(1+\frac{1}{3}x+\frac{1}{18}x^2 + \frac{1}{162}x^3+...)$
 
 
 # 10.2: 22
 
+$det(A-\lambda I)=0$
 
+$\begin{vmatrix} -6-\lambda & 5 \\ -5 & 4-\lambda \end{vmatrix}=0$
+
+$-24-4\lambda + 6\lambda + \lambda^2+25=0=\lambda^2+2\lambda +1 \rightarrow \lambda=-1$
+
+$\begin{vmatrix} -6+1 & 5 \\ -5 & 4+1 \end{vmatrix}=0 \rightarrow \begin{vmatrix} 1 & -1 \\ 0 & 0 \end{vmatrix}$
+
+$x_1-x_2=0 \rightarrow x_1=x_2$
+
+$K=\begin{bmatrix} 1 \\ 1\end{bmatrix}$
+
+$\begin{vmatrix} -6+1 & 5 \\ -5 & 4+1 \end{vmatrix}=\begin{bmatrix} 1 \\ 1\end{bmatrix} \rightarrow \begin{vmatrix} 1 & -1 \\ 0 & 0 \end{vmatrix}=\begin{bmatrix} \frac{-1}{5} \\ 0\end{bmatrix}$
+
+$x_1-x_2=\frac{-1}{5}; \ x_1=\frac{-1}{5}+x_2$
+
+$K_2=\begin{bmatrix} 0 \\ \frac{1}{5}\end{bmatrix}$
+
+$X=c_1(\begin{bmatrix} 1 \\ 1\end{bmatrix}e^{-t} + c_2(\begin{bmatrix} 1 \\ 1\end{bmatrix}t+\begin{bmatrix} 0 \\ \frac{1}{5}\end{bmatrix} )e^{-t}= \begin{bmatrix} c_1e^{-t}+ c_2te^{-t} \\ c_1e^{-t}+c_2(t+\frac{1}{5}e^{-t}) \end{bmatrix}$
 
 # 10.2: 38
+
+$det(A-\lambda I)=0$
+
+$\begin{vmatrix} 4-\lambda & 5 \\ -2 & 6-\lambda \end{vmatrix}=0$
+
+$24-4\lambda - 6\lambda + \lambda^2+10=0=\lambda^2-10\lambda +34 \rightarrow \lambda=5 \pm3i$
+
+$\begin{vmatrix} 4-(5+3i_) & 5 \\ -2 & 6-(5+3i) \end{vmatrix}=0 \rightarrow \begin{vmatrix} 1 & \frac{-1}{2}+\frac{3}{2}i \\ 0 & 0 \end{vmatrix}$
+
+$x_1=-(\frac{-1}{2}+\frac{3}{2}i)x_2$
+
+$K=\begin{bmatrix} 1-3i \\ 2\end{bmatrix}; \ Re(K)=K=\begin{bmatrix} 1 \\ 2\end{bmatrix}; \ Im(K)=K=\begin{bmatrix} -3 \\ 0\end{bmatrix}$
+
+$X=c_1(\begin{bmatrix} 1 \\ 2\end{bmatrix}cos3t-\begin{bmatrix} -3 \\ 0\end{bmatrix}sin3t) + c_2(\begin{bmatrix} -3 \\ 0\end{bmatrix}cos3t+\begin{bmatrix} 1 \\ 2\end{bmatrix}sin3t )= c_1\begin{bmatrix} cos3t+3sin3t \\ 2cos3t\end{bmatrix}e^{5t}+c_2\begin{bmatrix} sin3t-3cos3t \\ 2sin3t\end{bmatrix}e^{5t}$
+
 
 
 
 # 10.4: 14 by using variation of parameters using the matrix exponential formula
+
+$\frac{dx}{dt}=2x-y; \\ \frac{dy}{dt}=3x-2y+4t$
+
+$\begin{vmatrix} 2-\lambda & -1 \\ 3 & -2-\lambda \end{vmatrix} \rightarrow \lambda^2-1=0; \ \lambda=-1,1$
+
+For,$\lambda=-1$, eigenvector $=\begin{bmatrix} 1 \\ 1\end{bmatrix}$
+
+For,$\lambda=1$, eigenvector $=\begin{bmatrix} 1 \\ 3\end{bmatrix}$
+
+
+$x_c(t)=c_1\begin{bmatrix} 1 \\ 1\end{bmatrix}e^t+c_2\begin{bmatrix} 1 \\ 3\end{bmatrix}e^{-t}$
+
+$\phi =\begin{bmatrix} e^t & e^{-t} \\ e^t& 3e^{-t}\end{bmatrix}; \ \phi^{-1}=\begin{bmatrix} \frac{3}{2}e^{-t} & \frac{-1}{2}e^{-t} \\ \frac{1}{2}e^t& \frac{1}{2}e^{t}\end{bmatrix}$
+
+$X_p=\phi \int\phi^{-1}Fdt=\begin{bmatrix} e^t & e^{-t} \\ e^t& 3e^{-t}\end{bmatrix} \int \begin{bmatrix} \frac{3}{2}e^{-t} & \frac{-1}{2}e^{-t} \\ \frac{1}{2}e^t& \frac{1}{2}e^{t}\end{bmatrix} \begin{bmatrix} 0 \\ 4 \end{bmatrix}= \begin{bmatrix} e^t & e^{-t} \\ e^t& 3e^{-t}\end{bmatrix} \begin{bmatrix} 2te^{-t}+2e^{-t} \\ 2te^t-2e^{t}\end{bmatrix}=\begin{bmatrix} 4 \\ 8\end{bmatrix}t+ \begin{bmatrix} 0 \\ -4\end{bmatrix}$
+
+
 
 
 
