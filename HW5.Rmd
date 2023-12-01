@@ -1,0 +1,157 @@
+---
+title: "HW5"
+author: "Patrick Gardocki"
+date: "2023-12-4"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 17.3.25
+
+$z^2 -\bar{z}^2=2$
+
+$(x+yi)^2+\bar{(x+yi)}^2=2$
+
+$x^2-y^2+x^2-y^2=2 \rightarrow x^2-y^2=1$
+
+The set of points simplifies to a hyperbola with its center at the origin.
+
+# 17.4.24
+
+$lim_{z\to1}\frac{x+y-1}{z-1}$
+
+For $y=0, \ x\to1: \ lim_{x\to1}\frac{x-1}{z-1}=1$
+
+For $y\to 0, \ x=1: \ lim_{x\to1}\frac{y}{yi}=-i$
+
+Since limit approaches different values, the limit does not exist.
+
+# 17.4.37
+
+$f(z)=\frac{z^3+z}{z^2+4}$
+
+$z^2+4=0 \to z=\pm 2i$
+
+Function will not be analytic at $z=\pm 2i$
+
+
+# 17.5.18
+
+$f(z)=3x^2y^2-6x^2y^2i$
+
+$u(x,y)=3x^2y^2; \ v(x,y)=-6x^2y^2$
+
+$\frac{\partial}{\partial x}u = 6xy^2$
+
+$\frac{\partial}{\partial y}v = -12x^2y$
+
+$6xy^2=-12x^2y \to x=0;\ y=0;\ y=-2x$
+
+$\frac{\partial}{\partial y}u = 6x^2y$
+
+$\frac{\partial}{\partial x}v = -12xy^2$
+
+$6x^2y=-12xy^2 \to x=0;\ y=0;\ x=2y$
+
+For both: $x=0;\ y=0$
+
+If $x,y\ne 0 \to y=-4y \to y=0$
+
+$\therefore \ f(z)$ is not analytic but is differentiable along coordinate axes. 
+
+# 17.6.22a
+
+$f(z)=e^{z^2}=e^{(x+iy)^2} =e^{(x^2-y^2)+2xyi} = e^{x^2-y^2}(cos2xy+isin2xy)$
+
+$u(x,y)=e^{x^2-y^2}cos2xy; \ v(x,y)=e^{x^2-y^2}sin2xy$
+
+$\frac{\partial}{\partial x}u = e^{x^2-y^2}(2xcos2xy-2ysin2xy)$
+
+$\frac{\partial}{\partial y}v = e^{x^2-y^2}(2xcos2xy-2ysin2xy)$
+
+$\frac{\partial}{\partial x}u = \frac{\partial}{\partial y}v$
+
+$\frac{\partial}{\partial y}u = e^{x^2-y^2}(-2ycos2xy-2xsin2xy)$
+
+$\frac{\partial}{\partial x}v = e^{x^2-y^2}(2ycos2xy+2xsin2xy)$
+
+$\frac{\partial}{\partial y}u = -\frac{\partial}{\partial x}v$
+
+Since both Cauchy-Riemann conditions are met, $f(z)$ is an entire function.
+
+# 17.7.16
+
+$cosz=-3i$
+
+$\frac{e^{iz}+e^{-iz}}{2}=-3i$
+
+$e^{iz}+e^{-iz}+6i=0 \to e^{2iz}+1+6ie^{iz}=0$
+
+$e^{iz}=\frac{-61\pm \sqrt{36i^2-4}}{2} = i(-3 \pm \sqrt{10})$
+
+$iz=ln(i(-3 \pm \sqrt{10})) +\frac{\pi}{2}i+ 2n\pi i$
+
+$z=ln((-3 \pm \sqrt{10}))i \pm\frac{\pi}{2}+ 2n\pi$
+
+
+# 17.Review.38
+
+$f(z)=x^3+xy^2-4x+i(4y-y^3-x^2y))$
+
+$\frac{\partial}{\partial x}u = 3x^2+y^2-4$
+
+$\frac{\partial}{\partial y}v = 4-3y^2-x^2$
+
+Since: $\frac{\partial}{\partial x}u \ne \frac{\partial}{\partial y}v$, the function is not analytic but is differentiable given it is continuous.
+
+# 18.1.11
+
+$\int_C f(z)dz=\int_{C1}f(z)dz+\int_{C2}f(z)dz$
+
+For line from $y=0$ for $0\le x\le 2$, $z(x)=x$. $f(z(x))=e^x$
+
+$\int_{C1}e^xdx=e^x|_0^2=e^2-1$
+
+For line from $z=2$ to $z=1+i\pi$, for $1\le x \le 2$, $y=-\pi (x-2)$ 
+
+$z(x)=x+i(2\pi -\pi x), \ z'(x)=1-\pi i$
+
+$f(z(x))=e^{x+i(2\pi -\pi x)}$
+
+$(1-\pi i)\int_{2}^1e^{x+i(2\pi -\pi x)}dx=-e-e^2$
+
+Finally:
+
+$\int_C e^zdz=\int_{C1}e^zdz+\int_{C2}e^zdz= e^2-1-e-e^2=-e-1$
+
+
+# 18.2.13
+
+$\int_C \frac{z}{z^2-\pi^2}dz; \ |z|=3$
+
+$\frac{z}{z^2-\pi^2}=\frac{A}{z-\pi}+\frac{B}{z+\pi} \to z= A(z+\pi)+B(z-\pi)$
+
+For $z=\pi$, $A=\frac{1}{2}$
+
+For $z=-\pi$, $B=\frac{1}{2}$
+
+$\frac{z}{z^2-\pi^2}=\frac{\frac{1}{2}}{z-\pi}+\frac{\frac{1}{2}}{z+\pi}$
+
+Since the function is not analytic at $z=\pm \pi$,
+$\int_C(\frac{\frac{1}{2}}{z-\pi}+\frac{\frac{1}{2}}{z+\pi})dz=0$
+
+
+# 18.3.17
+
+$\int_C\frac{1}{z}dz; \ z=4e^{it}; \ -\pi/2 \le t \le \pi/2$
+
+$f(z)=\frac{1}{z}; \ \int f(z)dz=lnz+C$
+
+For $t=-\pi/2$, $z(-\pi/2)=4e^{-(\pi/2)i} = 4(cos(-\pi/2) +isin(-\pi/2))=-4i$
+
+For $t=\pi/2$, $z(\pi/2)=4e^{(\pi/2)i} = 4(cos(\pi/2) +isin(\pi/2))=4i$
+
+$\int_{-4i}^{4i}\frac{1}{z}dz=lnz|_{-4i}^{4i}=ln4+i\pi/2-(ln4-i\pi/2)= i\pi$
